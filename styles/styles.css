@@ -39,6 +39,10 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
