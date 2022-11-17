@@ -222,11 +222,11 @@
                 <div class="form__label-adults">
                   <label class="form__modal-title" for="numberAdults">Взрослые:</label>
                   <input class="form__modal-input form__input-adults" type="number" name="adults" id="numberAdults"
-                    value="2" max="999">
+                    value="2" min="0" max="999">
                   <button class="form__modal-button-minus" type="button"></button>
                   <button class="form__modal-button-plus" type="button"></button>
                 </div>
-                <span class="form__label-child">
+                <div class="form__label-child">
                   <label class="form__modal-title" for="numberChild">Дети:</label>
                   <span class="tooltip">
                     <button class="tooltip__toggle" type="button" aria-labelledby="tooltip-child-info">
@@ -242,10 +242,10 @@
                       лет. Дети до 6 лет размещаются бесплатно.</span>
                   </span>
                   <input class="form__modal-input form__input-child" type="number" name="child" id="numberChild"
-                    value="2" max="999">
+                    value="2" min="0" max="999">
                   <button class="form__modal-button-minus" type="button"></button>
                   <button class="form__modal-button-plus" type="button"></button>
-                </span>
+                </div>
               </div>
               <button class="form__modal-button-search button">Найти</button>
             </form>

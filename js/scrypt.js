@@ -4,15 +4,15 @@ const btnOpenPopup = document.querySelector('#btnOpenPopup');
 if (btnOpenPopup) {
   document.addEventListener('click', function (clickObject) {
     if (!clickObject.target.closest('#popup')) {
-      popupWrapper.style.display = "none";
+      popupWrapper.classList.remove('active-popup');
       document.body.classList.remove("lock");
     }
     if (clickObject.target.closest('#popapCloseBtn')) {
-      popupWrapper.style.display = "none";
+      popupWrapper.classList.remove('active-popup');
       document.body.classList.remove("lock");
     }
     if (clickObject.target.closest('#btnOpenPopup')) {
-      popupWrapper.style.display = "flex";
+      popupWrapper.classList.add('active-popup');
       document.body.classList.add("lock");
     }
   })
