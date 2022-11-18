@@ -1449,6 +1449,7 @@ body.lock {
   overflow-y: auto;
   transform: scale(0);
   overflow-x: hidden;
+  transition: transform 0.4s ease 0s, bacground 0s ease 0s;
 }
 
 .modal__wrapper.active-popup {
@@ -1513,6 +1514,12 @@ body.lock {
   line-height: 36px;
   margin: 0;
   margin-bottom: 64px;
+}
+
+@media (max-width: 371px) {
+  .modal__title {
+    margin-bottom: 40px;
+  }
 }
 
 .modal__form {

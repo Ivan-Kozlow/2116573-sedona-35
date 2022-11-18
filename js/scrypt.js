@@ -15,8 +15,21 @@ if (btnOpenPopup) {
       popupWrapper.classList.add('active-popup');
       document.body.classList.add("lock");
     }
-  })
+
+    if (clickObject.target.classList.contains("form__modal-button-plus")) {
+      let numInp = Number(clickObject.target.parentElement.querySelector("input").value) + 1;
+      if (numInp <= 999) {
+        ++clickObject.target.parentElement.querySelector("input").value;
+      }
+    } else if (clickObject.target.classList.contains("form__modal-button-minus")) {
+      let numInp = Number(clickObject.target.parentElement.querySelector("input").value) - 1;
+      if (numInp >= 0) {
+        --clickObject.target.parentElement.querySelector("input").value;
+      }
+    };
+  });
 }
+
 
 const isMobile = {
   Android: function () {
@@ -58,7 +71,7 @@ if (burger) {
   burger.addEventListener("click", function () {
     headerBlock.classList.toggle('active');
     burger.classList.toggle('active');
-    if (headerBlock.classList.contains("active") && window.screen.width < 820) {
+    if (burger.classList.contains('active')) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "visible";
